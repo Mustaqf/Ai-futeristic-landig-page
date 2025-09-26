@@ -1,0 +1,214 @@
+body {
+    background-color: rgb(5, 1, 20);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    margin: 0px 80px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 80px;
+}
+
+nav li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    text-decoration: none;
+}
+
+nav li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+nav li a:hover {
+    background-color: none;
+    color: rgb(0, 255, 255);
+    transition: 0.5s;
+    transform: scale(1.03);
+}
+
+nav h1 {
+    color: rgb(8, 154, 238);
+    font-size: 40px;
+    line-height: 0px;
+    transition: 0.3s;
+    animation-name: glow;
+    animation-direction: alternate-reverse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+nav h1:hover {
+    color: rgb(0, 255, 255);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 80px;
+    border-radius: 20px;
+    height: 400px;
+    background: linear-gradient(to bottom, rgba(4, 46, 72, 0.5), rgb(2, 0, 6));
+}
+
+.image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.image img {
+    height: 100%;
+    width: 325px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 50px;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.hero p {
+    color: white;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.hero .btn button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(6, 57, 86);
+    color: white;
+    cursor: pointer;
+    animation: box-shadowing;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: 2;
+    transition: 0.5s;
+}
+
+.hero .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.btn button:hover {
+    transform: scale(1.05);
+    box-shadow: 0.5px 1px 5px 6px rgb(5, 254, 237);
+}
+
+.features {
+    margin: 20px 80px;
+    padding-top: 30px;
+}
+
+.scene {
+    height: 300px;
+    width: 200px;
+}
+
+.card {
+    color: white;
+    width: 200px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transition: 0.8s;
+}
+
+.card:nth-child(1) {
+    animation-name: cardsrotate;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+.card-face {
+    position: absolute;
+    width: auto;
+    height: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+}
+
+.card-face img {
+    width: 200px;
+    height: 250px;
+    object-fit:cover;
+    display: block;
+}
+
+.scene .card:hover {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card_all {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+footer {
+    color: white;
+    margin: 0px 80px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@keyframes glow {
+    from {
+        color: beige;
+        transform: scale(1.5);
+    }
+
+    to {
+        color: rgb(0, 255, 255);
+    }
+}
+
+@keyframes box-shadowing {
+    to {
+        transform: rotateY(360deg);
+        animation-delay: 0.5s;
+    }
+}
+
+@keyframes cardsrotate {
+    to {
+        transform: rotateY(360deg);
+    }
+}
